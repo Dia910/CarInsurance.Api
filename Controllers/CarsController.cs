@@ -17,8 +17,17 @@ public class CarsController(CarService service) : ControllerBase
     [HttpGet("cars/{carId:long}/insurance-valid")]
     public async Task<ActionResult<InsuranceValidityResponse>> IsInsuranceValid(long carId, [FromQuery] string date)
     {
+        if(string.IsNullOrWhiteSpace(date))
+            return BadRequest("Date parameter is required.");
+
         if (!DateOnly.TryParse(date, out var parsed))
             return BadRequest("Invalid date format. Use YYYY-MM-DD.");
+
+        var minDate = new DateOnly(1930, 1, 1);
+        var maxDate = new DateOnly(2075, 12, 31);
+
+        if (parsed < minDate || parsed > maxDate)
+            return BadRequest($"Date must be between {minDate:yyyy-MM-dd} and {maxDate:yyyy-MM-dd}.");
 
         try
         {
@@ -27,7 +36,7 @@ public class CarsController(CarService service) : ControllerBase
         }
         catch (KeyNotFoundException)
         {
-            return NotFound();
+            return NotFound($"Car not found.");
         }
     }
 
