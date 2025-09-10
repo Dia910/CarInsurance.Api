@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInsurance.Api.Tests", "..\CarInsurance.Api.Tests\CarInsurance.Api.Tests.csproj", "{CD20BE86-656A-4CAF-B3C4-226C0C200A36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInsurance.Api.Tests", "..\CarInsurance.Api.Tests\CarInsurance.Api.Tests.csproj", "{1E1A4743-8DDA-492F-BBC8-0598F5DBD33C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +22,10 @@ Global
 		{D448F1CB-6F0E-736C-EEF1-3AC5923400B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D448F1CB-6F0E-736C-EEF1-3AC5923400B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D448F1CB-6F0E-736C-EEF1-3AC5923400B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD20BE86-656A-4CAF-B3C4-226C0C200A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD20BE86-656A-4CAF-B3C4-226C0C200A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD20BE86-656A-4CAF-B3C4-226C0C200A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD20BE86-656A-4CAF-B3C4-226C0C200A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1A4743-8DDA-492F-BBC8-0598F5DBD33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1A4743-8DDA-492F-BBC8-0598F5DBD33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1A4743-8DDA-492F-BBC8-0598F5DBD33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1A4743-8DDA-492F-BBC8-0598F5DBD33C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

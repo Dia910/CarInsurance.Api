@@ -9,6 +9,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<Car> Cars => Set<Car>();
     public DbSet<InsurancePolicy> Policies => Set<InsurancePolicy>();
     public DbSet<Claim> Claims => Set<Claim>();
+    public DbSet<PolicyExpirationLog> ExpirationLogs => Set<PolicyExpirationLog>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -33,6 +34,9 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             .Property(c => c.Amount)
             .HasPrecision(10, 2);
 
+        modelBuilder.Entity<PolicyExpirationLog>()
+            .HasIndex(e => new { e.PolicyId, e.ExpiredDate })
+            .IsUnique();
     }
 }
 

@@ -14,6 +14,7 @@ builder.Services.AddScoped<CarService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHostedService<PolicyExpirationService>();
 
 var app = builder.Build();
 
